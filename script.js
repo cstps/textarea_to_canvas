@@ -5,13 +5,6 @@ let ctx;
 // Bot의 시작위치
 let imgTag = new Image();
 
-let obj ={
-  x:0,
-  y:0,
-  w:10,
-  h:10
-};
-
 // 1회 이동거리
 let dx = 10;
 let dy = 10; 
@@ -56,7 +49,7 @@ function initBot(bot){
 function drawBot(ctx, bot) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.beginPath();
-    ctx.rect(bot.x,bot.y,obj.w,obj.h);
+    ctx.rect(bot.x,bot.y,bot.w,bot.h);
     ctx.fillStyle = "#0095DD";
     ctx.fill();
     ctx.closePath();
